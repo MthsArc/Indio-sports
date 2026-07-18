@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-carvao-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-noir text-marfim font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-ouro/30 text-marfim;
+  }
+
+  /* Visible keyboard focus, everywhere */
+  :focus-visible {
+    outline: 2px solid #B8923D;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    @apply font-sans text-[11px] uppercase tracking-widest2 text-ouro-bright/90;
+  }
+
+  .hairline-gold {
+    @apply border-t border-ouro/30;
+  }
+
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
